@@ -1,0 +1,11 @@
+{
+  "name": "javascript-lib-boilerplate",
+  "version": "0.0.1",
+  "description": "Javascript library boilerplate",
+  "main": "index.js",
+  "scripts": {
+    "test": ""
+  },
+  "author": "Sergio de la Garza",
+  "license": "MIT"
+}
