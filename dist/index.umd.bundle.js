@@ -1,8 +1,22 @@
-(function (factory) {
-	typeof define === 'function' && define.amd ? define(factory) :
-	factory();
-}(function () { 'use strict';
+/**
+ * javascript-lib-boilerplate v0.0.1
+ * Javascript library boilerplate
+ *
+ * @author Sergio de la Garza
+ * @license MIT
+ * @preserve
+ */
 
+(function (global, factory) {
+	typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports) :
+	typeof define === 'function' && define.amd ? define(['exports'], factory) :
+	(global = global || self, factory(global.MyModule = {}));
+}(this, function (exports) { 'use strict';
 
+	const sum = (a, b) => a + b;
+
+	exports.sum = sum;
+
+	Object.defineProperty(exports, '__esModule', { value: true });
 
 }));
