@@ -7,10 +7,12 @@ This repo contains the minimum code needed to create a Javascript library that c
 Clone this repository and install its dependencies:
 
 ```bash
-git clone --depth 1
-cd javascript-lib-boilerplate
+git clone --depth 1 my-module
+cd my-module
 npm install
 ```
+
+Open the [package.json](package.json) file and edit the value of the property `moduleName`. It's value will be name of the global variable used when the module is loaded via `<script src="module/path"></script>`.
 
 ## Build
 
