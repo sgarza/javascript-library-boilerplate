@@ -12,6 +12,12 @@ cd javascript-lib-boilerplate
 npm install
 ```
 
+## Build
+
+```bash
+npm run build
+```
+
 ## License
 
-[MIT](LICENSE.md).
+[MIT](LICENSE).
