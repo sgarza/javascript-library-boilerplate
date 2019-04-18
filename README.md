@@ -7,7 +7,7 @@ This repo contains the minimum code needed to create a Javascript library that c
 Clone this repository and install its dependencies:
 
 ```bash
-git clone --depth 1 my-module
+git clone --depth 1 https://github.com/sgarza/javascript-library-boilerplate my-module
 cd my-module
 npm install
 ```
