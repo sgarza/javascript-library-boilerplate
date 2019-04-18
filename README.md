@@ -14,6 +14,9 @@ npm install
 
 Open the [package.json](package.json) file and edit the value of the property `moduleName`. It's value will be name of the global variable used when the module is loaded via `<script src="module/path"></script>`.
 
+Remove the original git remote by running `git remote rm origin`.
+
+
 ## Build
 
 ```bash
