@@ -10,3 +10,4 @@
 const sum = (a, b) => a + b;
 
 export { sum };
+//# sourceMappingURL=index.esm.bundle.js.map

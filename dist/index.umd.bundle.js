@@ -20,3 +20,4 @@
 	Object.defineProperty(exports, '__esModule', { value: true });
 
 }));
+//# sourceMappingURL=index.umd.bundle.js.map
