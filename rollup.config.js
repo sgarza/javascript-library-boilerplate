@@ -21,11 +21,13 @@ export default [
       {
         file: moduleFile,
         format: 'esm',
+        sourcemap: true,
         banner,
       },
       {
         file: main,
         format: 'umd',
+        sourcemap: true,
         name: moduleName,
         banner,
       },
