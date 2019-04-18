@@ -7,7 +7,7 @@ This repo contains the minimum code needed to create a Javascript library that c
 Clone this repository and install its dependencies:
 
 ```bash
-git clone
+git clone --depth 1
 cd javascript-lib-boilerplate
 npm install
 ```

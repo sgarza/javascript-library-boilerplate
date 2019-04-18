@@ -5,13 +5,17 @@
   "main": "index.js",
   "scripts": {
     "build": "rollup -c",
-    "test": ""
+    "test": "mocha -r reify -r source-map-support/register tests/**/*.test.js"
   },
   "author": "Sergio de la Garza",
   "license": "MIT",
   "devDependencies": {
+    "chai": "^4.2.0",
+    "mocha": "^6.1.3",
+    "reify": "^0.18.1",
     "rollup": "^1.10.0",
     "rollup-plugin-commonjs": "^9.3.4",
-    "rollup-plugin-node-resolve": "^4.2.3"
+    "rollup-plugin-node-resolve": "^4.2.3",
+    "source-map-support": "^0.5.12"
   }
 }
