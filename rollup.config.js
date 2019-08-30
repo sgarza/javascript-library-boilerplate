@@ -1,7 +1,17 @@
-import resolve from 'rollup-plugin-node-resolve';
-import commonjs from 'rollup-plugin-commonjs';
-import multiEntry from 'rollup-plugin-multi-entry';
-import { version, author, name, main, license, description, moduleName, module as moduleFile } from './package.json';
+import resolve from "rollup-plugin-node-resolve";
+import commonjs from "rollup-plugin-commonjs";
+import multiEntry from "rollup-plugin-multi-entry";
+import babel from "rollup-plugin-babel";
+import {
+  version,
+  author,
+  name,
+  main,
+  license,
+  description,
+  moduleName,
+  module as moduleFile
+} from "./package.json";
 
 const banner = `\
 /**
@@ -16,46 +26,52 @@ const banner = `\
 
 export default [
   {
-    input: 'src/index.js',
+    input: "src/index.js",
     output: [
       {
         file: moduleFile,
-        format: 'esm',
+        format: "esm",
         sourcemap: true,
-        banner,
+        banner
       },
       {
         file: main,
-        format: 'umd',
+        format: "umd",
         sourcemap: true,
         name: moduleName,
-        banner,
-      },
+        banner
+      }
     ],
     plugins: [
       resolve(),
       commonjs(),
+      babel({
+        exclude: "node_modules/**"
+      })
     ]
   },
   {
-    input: 'tests/**/*.test.js',
+    input: "tests/**/*.test.js",
     output: {
-      file: 'dist/tests.bundle.js',
-      name: 'lib',
+      file: "dist/tests.bundle.js",
+      name: "lib",
       sourcemap: true,
-      format: 'iife',
+      format: "iife",
       banner,
       globals: {
-        chai: 'chai',
-        it: 'it',
-        describe: 'describe',
-      },
+        chai: "chai",
+        it: "it",
+        describe: "describe"
+      }
     },
-    external: ['chai', 'it', 'describe'],
+    external: ["chai", "it", "describe"],
     plugins: [
       resolve(),
       commonjs(),
-      multiEntry(),
-    ],
-  },
+      babel({
+        exclude: "node_modules/**"
+      }),
+      multiEntry()
+    ]
+  }
 ];
