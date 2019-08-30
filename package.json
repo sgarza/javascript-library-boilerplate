@@ -1,6 +1,6 @@
 {
   "name": "javascript-lib-boilerplate",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Javascript library boilerplate",
   "main": "dist/index.umd.bundle.js",
   "module": "dist/index.esm.bundle.js",
