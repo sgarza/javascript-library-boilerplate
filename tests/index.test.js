@@ -1,4 +1,3 @@
-import { expect } from "chai";
 import { sum } from "../src/index";
 
 describe("sum", () => {
@@ -8,6 +7,6 @@ describe("sum", () => {
 
     const result = sum(a, b);
 
-    expect(result).to.be.equal(a + b);
+    expect(result).toBe(a + b);
   });
 });

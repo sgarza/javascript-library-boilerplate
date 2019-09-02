@@ -1,5 +1,5 @@
 /**
- * javascript-lib-boilerplate v0.0.1
+ * javascript-lib-boilerplate v0.0.2
  * Javascript library boilerplate
  *
  * @author Sergio de la Garza
