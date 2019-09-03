@@ -1,6 +1,5 @@
 import resolve from "rollup-plugin-node-resolve";
 import commonjs from "rollup-plugin-commonjs";
-import multiEntry from "rollup-plugin-multi-entry";
 import babel from "rollup-plugin-babel";
 import {
   version,
@@ -48,30 +47,6 @@ export default [
       babel({
         exclude: "node_modules/**"
       })
-    ]
-  },
-  {
-    input: "tests/**/*.test.js",
-    output: {
-      file: "dist/tests.bundle.js",
-      name: "lib",
-      sourcemap: true,
-      format: "iife",
-      banner,
-      globals: {
-        chai: "chai",
-        it: "it",
-        describe: "describe"
-      }
-    },
-    external: ["chai", "it", "describe"],
-    plugins: [
-      resolve(),
-      commonjs(),
-      babel({
-        exclude: "node_modules/**"
-      }),
-      multiEntry()
     ]
   }
 ];
