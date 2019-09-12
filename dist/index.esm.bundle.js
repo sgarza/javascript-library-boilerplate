@@ -7,7 +7,9 @@
  * @preserve
  */
 
-const sum = (a, b) => a + b;
+var sum = function sum(a, b) {
+  return a + b;
+};
 
 export { sum };
 //# sourceMappingURL=index.esm.bundle.js.map

@@ -13,7 +13,9 @@
 	(global = global || self, factory(global.MyModule = {}));
 }(this, function (exports) { 'use strict';
 
-	const sum = (a, b) => a + b;
+	var sum = function sum(a, b) {
+	  return a + b;
+	};
 
 	exports.sum = sum;
 
